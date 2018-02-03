@@ -531,6 +531,46 @@ while($i -lt 4)
 
 <b>Exit code_erreur</b> permet de transmettre une valeur erreur.
 
+<p>
+A rajouter :
+
+“Get-childitem Variable:”
+
+show-object
+
+Invoke-WebRequest
+
+Invoke-RestMethod
+
+Envoyer du texte vers le presse-papiers :
+Gci | clip
+
+Chercher un module sur internet :
+Find-module
+
+Installer un module trouvé sur internet
+install-module
+
+## .NET lists which are very fast
+
+$intList = New-Object System.Collections.Generic.List[int]
+1..10000 | % { $intList.Add($_) }
+
+$objList = New-Object System.Collections.Generic.List[object]
+Get-ChildItem | % { $objList.Add($_) }
+
+$intList.Count
+$objList.Count
+
+$intList.Where({ $_ % 1000 -eq 0})
+
+
+
++ Rajouter ce qui se trouve sur ce site :
+https://blogs.technet.microsoft.com/ashleymcglone/2017/07/12/slow-code-top-5-ways-to-make-your-powershell-scripts-run-faster/
+</p>
+
+
 
 
 <script src="scripts/prism.js"></script>
