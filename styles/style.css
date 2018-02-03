@@ -1,0 +1,66 @@
+html {
+  font-size: 12px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: rgb(224, 224, 224);
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;    
+  color: #00539F;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgb(78, 78, 78);
+}
+
+caption {
+  padding: 5px;
+  caption-side: top;
+  color: #555;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+thead th:nth-child(1) {
+  width: 50%;
+}
+
+thead th:nth-child(2) {
+  width: 50%;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  letter-spacing: 1px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #c5c5c5;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
