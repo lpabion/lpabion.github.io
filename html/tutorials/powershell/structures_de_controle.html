@@ -181,18 +181,18 @@
 
         Exemples d’utilisation :
 
-        <pre><code class="language-powershell">$variableNombreEntier = 123
-        $variableTexte= “toto”
+<pre><code class="language-powershell">$variableNombreEntier = 123
+$variableTexte= “toto”
 
-        $variableNombreEntier -eq 123
-        >> True
-        $variableNombreEntier -gt 18000
-        >> False
-        $variableNombreEntier -is “Int”
-        >> True
-        $variableNombreEntier -is “Int” -and $variableTexte -is “String”
-        >> True
-        </pre></code>
+$variableNombreEntier -eq 123
+>> True
+$variableNombreEntier -gt 18000
+>> False
+$variableNombreEntier -is “Int”
+>> True
+$variableNombreEntier -is “Int” -and $variableTexte -is “String”
+>> True
+</pre></code>
 
         <br />
 
@@ -201,43 +201,43 @@
 
         Syntaxe :
 
-        <pre><code class="language-powershell">if (condition)
-        {
-            # code...
-        }
-        elseif (condition2)
-        {
-            # code...
-        }
-        else
-        {
-            # code...
-        }
-        </pre></code>
+<pre><code class="language-powershell">if (condition)
+{
+    # code...
+}
+elseif (condition2)
+{
+    # code...
+}
+else
+{
+    # code...
+}
+</pre></code>
 
         <h3>3.3 switch</h3>
 
         Syntaxe (simple) :
 
-        <pre><code class="language-powershell">switch ($element)
-        {
-                valeur1 {expression}
-                valeur2 {expression}
-        }
-        </pre></code>
+<pre><code class="language-powershell">switch ($element)
+{
+        valeur1 {expression}
+        valeur2 {expression}
+}
+</pre></code>
 
         Exemple :
 
-        <pre><code class="language-powershell">$application = “Excel”
-        switch ($application)
-        {
-            Word {“Lancement de Word” ; break}
-            Powerpoint {“Lancement de Powerpoint” ; break}
-            Excel {“Lancement d’Excel” ; break}
-            default {“Lancement de Notepad” ; break}
-        }
-        >> Lancement d’Excel
-        </pre></code>
+<pre><code class="language-powershell">$application = “Excel”
+switch ($application)
+{
+    Word {“Lancement de Word” ; break}
+    Powerpoint {“Lancement de Powerpoint” ; break}
+    Excel {“Lancement d’Excel” ; break}
+    default {“Lancement de Notepad” ; break}
+}
+>> Lancement d’Excel
+</pre></code>
         <p>
         <b>Notes :</b>
         <br />
@@ -247,25 +247,25 @@
         <br />
         Syntaxe (complète) :
         </p>
-        <pre><code class="language-powershell">switch [-regex -wildcard -casesensitive -exact] ($element)
-        {
-            valeur1 {expression}
-            valeur2 {expression}
-        }
-        </pre></code>
+<pre><code class="language-powershell">switch [-regex -wildcard -casesensitive -exact] ($element)
+{
+    valeur1 {expression}
+    valeur2 {expression}
+}
+</pre></code>
 
         Exemple :
 
-        <pre><code class="language-powershell">$application = “Powerpoint”
-        switch -wildcard ($application)
-        {
-            W* {“Lancement de Word”}
-            P* {“Lancement de Powerpoint”}
-            E* {“Lancement d’Excel”}
-            default {“Lancement de Notepad”}
-        }
-        >> Lancement de Powerpoint
-        </pre></code>
+<pre><code class="language-powershell">$application = “Powerpoint”
+switch -wildcard ($application)
+{
+    W* {“Lancement de Word”}
+    P* {“Lancement de Powerpoint”}
+    E* {“Lancement d’Excel”}
+    default {“Lancement de Notepad”}
+}
+>> Lancement de Powerpoint
+</pre></code>
 
         <h3>3.4 while</h3>
         Le code tourne en boucle tant qu’une condition est vraie.
@@ -273,23 +273,23 @@
         <br />
         Syntaxe while :
 
-        <pre><code class="language-powershell">while(condition)
-        {
-            # code...
-        }
-        </pre></code>
+<pre><code class="language-powershell">while(condition)
+{
+    # code...
+}
+</pre></code>
 
         Exemple while :
 
-        <pre><code class="language-powershell">$i = 0
-        while($i -ne 2)
-        {
-            Write-host $i    # pour afficher un message dans la console
-            $i++
-        }
-        >> 0
-        >> 1
-        </pre></code>
+<pre><code class="language-powershell">$i = 0
+while($i -ne 2)
+{
+    Write-host $i    # pour afficher un message dans la console
+    $i++
+}
+>> 0
+>> 1
+</pre></code>
 
         <h3>3.5 do... while / do… until</h3>
 
@@ -298,49 +298,49 @@
         <br />
         Syntaxe do… while :
 
-        <pre><code class="language-powershell">Do
-        {
-            # code...
-        }
-        while(condition)
-        </pre></code>
+<pre><code class="language-powershell">Do
+{
+    # code...
+}
+while(condition)
+</pre></code>
 
         Exemple do… while :
 
-        <pre><code class="language-powershell">$i = 0
-        do
-        {
-            Write-host $i     # pour afficher un message dans la console
-            $i++
-        }
-        while ($i -lt 3)
-        >> 0
-        >> 1
-        >> 2
-        </pre></code>
+<pre><code class="language-powershell">$i = 0
+do
+{
+    Write-host $i     # pour afficher un message dans la console
+    $i++
+}
+while ($i -lt 3)
+>> 0
+>> 1
+>> 2
+</pre></code>
 
         Syntaxe do… until :
 
-        <pre><code class="language-powershell">do
-        {
-            # code...
-        }
-        until(condition)
-        </pre></code>
+<pre><code class="language-powershell">do
+{
+    # code...
+}
+until(condition)
+</pre></code>
 
         Exemple do… until :
 
-        <pre><code class="language-powershell">$i = 0
-        do
-        {
-            Write-host $i     # pour afficher un message dans la console
-            $i++
-        }
-        until ($i -gt 2)
-        >> 0
-        >> 1
-        >> 2
-        </pre></code>
+<pre><code class="language-powershell">$i = 0
+do
+{
+    Write-host $i     # pour afficher un message dans la console
+    $i++
+}
+until ($i -gt 2)
+>> 0
+>> 1
+>> 2
+</pre></code>
 
         <h3>3.6 foreach</h3>
 
@@ -349,24 +349,24 @@
         <br />
         Syntaxe foreach :
 
-        <pre><code class="language-powershell">foreach($element in $collection)
-        {
-            # code...
-        }
-        </pre></code>
+<pre><code class="language-powershell">foreach($element in $collection)
+{
+    # code...
+}
+</pre></code>
 
         Exemple foreach :
 
-        <pre><code class="language-powershell">$tableauNombresEntiers = @(10, 20, 30, 40)
-        foreach ($nombre in $tableauNombresEntiers)
-        {
-            Write-host ($nombre + 1)
-        }
-        >> 11
-        >> 21
-        >> 31
-        >> 41
-        </pre></code>
+<pre><code class="language-powershell">$tableauNombresEntiers = @(10, 20, 30, 40)
+foreach ($nombre in $tableauNombresEntiers)
+{
+    Write-host ($nombre + 1)
+}
+>> 11
+>> 21
+>> 31
+>> 41
+</pre></code>
 
         <h3>3.7 for</h3>
         Exécute du code en s’appuyant sur le test d’une condition.
@@ -375,22 +375,22 @@
 
         Syntaxe for :
 
-        <pre><code class="language-powershell">foreach($initialisationVariable; condtion; repetition )
-        {
-            # code...
-        }
-        </pre></code>
+<pre><code class="language-powershell">foreach($initialisationVariable; condtion; repetition )
+{
+    # code...
+}
+</pre></code>
 
         Exemple for :
 
-        <pre><code class="language-powershell">for ($i = 0; $i -lt 3; $i++)
-        {
-            Write-host $i
-        }
-        >> 0
-        >> 1
-        >> 2
-        </pre></code>
+<pre><code class="language-powershell">for ($i = 0; $i -lt 3; $i++)
+{
+    Write-host $i
+}
+>> 0
+>> 1
+>> 2
+</pre></code>
 
         <h3>3.8 break / continue / return / exit</h3>
 
@@ -400,16 +400,16 @@
 
         Exemple break :
 
-        <pre><code class="language-powershell">$i = 0
-        while($i -lt 4)
-        {
-            $i++
-            if ($i -eq 3) {break}
-            write-host $i
-        }
-        >> 1
-        >> 2
-        </pre></code>
+<pre><code class="language-powershell">$i = 0
+while($i -lt 4)
+{
+    $i++
+    if ($i -eq 3) {break}
+    write-host $i
+}
+>> 1
+>> 2
+</pre></code>
         <br />
 
         <b>continue</b> permet de revenir au début de la boucle et donc de ne pas terminer l’étape en cours.
@@ -417,17 +417,17 @@
         <br />
         Exemple continue :
 
-        <pre><code class="language-powershell">$i = 0
-        while($i -lt 4)
-        {
-            $i++
-            if ($i -eq 3) {continue}
-            write-host $i
-        }
-        >> 1
-        >> 2
-        >> 4
-        </pre></code>
+<pre><code class="language-powershell">$i = 0
+while($i -lt 4)
+{
+    $i++
+    if ($i -eq 3) {continue}
+    write-host $i
+}
+>> 1
+>> 2
+>> 4
+</pre></code>
         <br />
 
         <b>Return valeur</b> permet de transmettre une valeur à la sortie d’un fonction ou d’un script

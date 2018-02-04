@@ -23,17 +23,17 @@
         <h3>2.1 Création des variables :</h3>
 
         Création d’une variable sans préciser le type :
-        <pre><code class="language-powershell">$variableNombreEntier = 123
-        $variableTexte= “toto”
-        $variableTableau = @(123, ”toto”, 456.51, “test”)
-        </code></pre>
+<pre><code class="language-powershell">$variableNombreEntier = 123
+$variableTexte= “toto”
+$variableTableau = @(123, ”toto”, 456.51, “test”)
+</code></pre>
 
         Création d’une variable en forçant le type :
-        <pre><code class="language-powershell">[int]$variableNombreEntier = 123
-        [string]$variableTexte = “toto”
-        [Int[]]$tableauNombresEntiers = @(10, 20, 30, 40)
-        [string[]]$tableauTexte = @(“toto”, “test”, “Excel”)
-        </code></pre>
+<pre><code class="language-powershell">[int]$variableNombreEntier = 123
+[string]$variableTexte = “toto”
+[Int[]]$tableauNombresEntiers = @(10, 20, 30, 40)
+[string[]]$tableauTexte = @(“toto”, “test”, “Excel”)
+</code></pre>
 
         <p>
         Les types les plus courants sont :<br />
@@ -54,50 +54,50 @@
 
         Contenu des variables servant de référence pour les exemples ci-après :
 
-        <pre><code class="language-powershell">$tableauNombresEntiers = @(10, 20, 30, 40)
-        $tableauTexte = @(“toto”, “test”, ”Excel”)
-        </code></pre>
+<pre><code class="language-powershell">$tableauNombresEntiers = @(10, 20, 30, 40)
+$tableauTexte = @(“toto”, “test”, ”Excel”)
+</code></pre>
 
         Récupérer le premier élément du tableau (Powershell compte les éléments à partir de zéro) :
-        <pre><code class="language-powershell">$tableauNombresEntiers[0]
-        >> 10
-        </code></pre>
+<pre><code class="language-powershell">$tableauNombresEntiers[0]
+>> 10
+</code></pre>
 
         Récupérer le dernier élément du tableau :
-        <pre><code class="language-powershell">$tableauTexte[-1]
-        >> Excel
-        </code></pre>
+<pre><code class="language-powershell">$tableauTexte[-1]
+>> Excel
+</code></pre>
 
         Récupérer les éléments 2 à 4 du tableau :
-        <pre><code class="language-powershell">$tableauNombresEntiers[1..3]
-        >> 20
-        >> 30
-        >> 40
-        </code></pre>
+<pre><code class="language-powershell">$tableauNombresEntiers[1..3]
+>> 20
+>> 30
+>> 40
+</code></pre>
 
         Récupérer le nombre d’éléments qui composent le tableau :
-        <pre><code class="language-powershell">$tableauNombresEntiers.Length
-        >> 4
-        </code></pre>
+<pre><code class="language-powershell">$tableauNombresEntiers.Length
+>> 4
+</code></pre>
 
         Parcourir le contenu d’un tableau dans son intégralité :
-        <pre><code class="language-powershell">foreach ($nombre in $tableauNombresEntiers)
-        {
-            $nombre
-        }
-        >> 1
-        >> 2
-        >> 3
-        >> 4
-        </code></pre>
+<pre><code class="language-powershell">foreach ($nombre in $tableauNombresEntiers)
+{
+    $nombre
+}
+>> 1
+>> 2
+>> 3
+>> 4
+</code></pre>
 
         Modifier un tableau après sa création :
-        <pre><code class="language-powershell"># Méthode n°1 pour remplacer la valeur 30 dans le tableau par la valeur 600 :
-        $tableauNombresEntiers[2] = 600
+<pre><code class="language-powershell"># Méthode n°1 pour remplacer la valeur 30 dans le tableau par la valeur 600 :
+$tableauNombresEntiers[2] = 600
 
-        # Méthode n°2 :
-        $tableauNombresEntiers.SetValue(600, 2)
-        </code></pre>
+# Méthode n°2 :
+$tableauNombresEntiers.SetValue(600, 2)
+</code></pre>
 
         <h3>2.3 Variables automatiquement créées par Powershell et variables d’environnement</h3>
 
