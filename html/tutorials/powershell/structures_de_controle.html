@@ -19,9 +19,9 @@
 
     <div class="contenu">
         <h1>TUTORIEL POWERSHELL</h1>
-        <h2>3. Structures de contrôle (tests et boucles)</h2>
+        <h2># Structures de contrôle (tests et boucles)</h2>
 
-        <h3>3.1 Opérateurs de comparaison</h3>
+        <h3>1. Opérateurs de comparaison</h3>
 
         <table>
             <caption>Par défaut, les opérateurs sont insensibles à la casse. Les plus couramment utilisés sont :</caption>
@@ -197,7 +197,7 @@ $variableNombreEntier -is “Int” -and $variableTexte -is “String”
         <br />
 
 
-        <h3>3.2 if... elseif... else</h3>
+        <h3>2. if... elseif... else</h3>
 
         Syntaxe :
 
@@ -215,7 +215,7 @@ else
 }
 </pre></code>
 
-        <h3>3.3 switch</h3>
+        <h3>3. switch</h3>
 
         Syntaxe (simple) :
 
@@ -267,7 +267,7 @@ switch -wildcard ($application)
 >> Lancement de Powerpoint
 </pre></code>
 
-        <h3>3.4 while</h3>
+        <h3>4. while</h3>
         Le code tourne en boucle tant qu’une condition est vraie.
         <br />
         <br />
@@ -291,7 +291,7 @@ while($i -ne 2)
 >> 1
 </pre></code>
 
-        <h3>3.5 do... while / do… until</h3>
+        <h3>5. do... while / do… until</h3>
 
         Le code tourne en boucle tant qu’une condition est vraie (do… while) ou jusqu’à ce qu’elle soit vraie (do… until). La condition étant testée à la fin, le code contenu dans “do” va s’exécuter au moins une fois.
         <br />
@@ -342,7 +342,7 @@ until ($i -gt 2)
 >> 2
 </pre></code>
 
-        <h3>3.6 foreach</h3>
+        <h3>6. foreach</h3>
 
         Passe en revue chaque objet d’une collection d’objets et exécute du code sur chacun d’entre eux.
         <br />
@@ -368,7 +368,7 @@ foreach ($nombre in $tableauNombresEntiers)
 >> 41
 </pre></code>
 
-        <h3>3.7 for</h3>
+        <h3>7. for</h3>
         Exécute du code en s’appuyant sur le test d’une condition.
         <br />
         <br />
@@ -392,7 +392,7 @@ foreach ($nombre in $tableauNombresEntiers)
 >> 2
 </pre></code>
 
-        <h3>3.8 break / continue / return / exit</h3>
+        <h3>8. break / continue / return / exit</h3>
 
         <b>break</b> permet de sortir d’une boucle immédiatement.
         <br />
