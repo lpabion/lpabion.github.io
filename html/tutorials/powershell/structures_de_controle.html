@@ -3,126 +3,22 @@
 <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/prism.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../../css/prism.css" rel="stylesheet" type="text/css">
     <title>Tutoriel Powershell</title>
 </head>
     
 <body>
     <div class="navigation">
         <ul>
-            <li><a class="active" href="html/tutorials/powershell/commentaires.html">Commentaires</a></li>
-            <li><a href="html/tutorials/powershell/variables.html">Variables</a></li>
-            <li><a href="html/tutorials/powershell/structures_de_controle.html">Structures</a></li>
+            <li><a href="commentaires.html">Commentaires</a></li>
+            <li><a href="variables.html">Variables</a></li>
+            <li><a class="active" href="structures_de_controle.html">Structures</a></li>
         </ul>
     </div>
 
     <div class="contenu">
         <h1>TUTORIEL POWERSHELL</h1>
-        <h2>1.  Commenter le code</h2>
-        <pre><code class="language-powershell"># Pour mettre un commentaire sur une ligne, commencer la ligne avec le caractère "#"
-        # Pour mettre un commentaire sur plusieurs lignes :
-        <#
-            Commentaire sur
-            plusieurs
-            lignes
-        #>
-        </code></pre>
-
-
-
-
-
-        <br />
-        <h2>2. Variables</h2>
-        <h3>2.1 Création des variables :</h3>
-
-        Création d’une variable sans préciser le type :
-        <pre><code class="language-powershell">$variableNombreEntier = 123
-        $variableTexte= “toto”
-        $variableTableau = @(123, ”toto”, 456.51, “test”)
-        </code></pre>
-
-        Création d’une variable en forçant le type :
-        <pre><code class="language-powershell">[int]$variableNombreEntier = 123
-        [string]$variableTexte = “toto”
-        [Int[]]$tableauNombresEntiers = @(10, 20, 30, 40)
-        [string[]]$tableauTexte = @(“toto”, “test”, “Excel”)
-        </code></pre>
-
-        <p>
-        Les types les plus courants sont :<br />
-        <br />
-        <b>[array]</b> : variable de type “tableau”<br />
-        <b>[bool]</b> : accepte les valeur $True et $False uniquement<br />
-        <b>[char]</b> :    un caractère<br />
-        <b>[datetime]</b> : date et heure<br />
-        <b>[int]</b> : Entier<br />
-        <b>[decimal]</b><br />
-        <b>[double]</b><br />
-        <b>[psObject]</b> : objet powershell<br />
-        <b>[string]</b> : chaîne de caractères<br />
-        </p>
-
-        <br />
-        <h3>2.2 Manipuler une variable de type tableau :</h3>
-
-        Contenu des variables servant de référence pour les exemples ci-après :
-
-        <pre><code class="language-powershell">$tableauNombresEntiers = @(10, 20, 30, 40)
-        $tableauTexte = @(“toto”, “test”, ”Excel”)
-        </code></pre>
-
-        Récupérer le premier élément du tableau (Powershell compte les éléments à partir de zéro) :
-        <pre><code class="language-powershell">$tableauNombresEntiers[0]
-        >> 10
-        </code></pre>
-
-        Récupérer le dernier élément du tableau :
-        <pre><code class="language-powershell">$tableauTexte[-1]
-        >> Excel
-        </code></pre>
-
-        Récupérer les éléments 2 à 4 du tableau :
-        <pre><code class="language-powershell">$tableauNombresEntiers[1..3]
-        >> 20
-        >> 30
-        >> 40
-        </code></pre>
-
-        Récupérer le nombre d’éléments qui composent le tableau :
-        <pre><code class="language-powershell">$tableauNombresEntiers.Length
-        >> 4
-        </code></pre>
-
-        Parcourir le contenu d’un tableau dans son intégralité :
-        <pre><code class="language-powershell">foreach ($nombre in $tableauNombresEntiers)
-        {
-            $nombre
-        }
-        >> 1
-        >> 2
-        >> 3
-        >> 4
-        </code></pre>
-
-        Modifier un tableau après sa création :
-        <pre><code class="language-powershell"># Méthode n°1 pour remplacer la valeur 30 dans le tableau par la valeur 600 :
-        $tableauNombresEntiers[2] = 600
-
-        # Méthode n°2 :
-        $tableauNombresEntiers.SetValue(600, 2)
-        </code></pre>
-
-        <h3>2.3 Variables automatiquement créées par Powershell et variables d’environnement</h3>
-
-        A compléter !!!<br />
-
-
-
-
-
-        <br />
         <h2>3. Structures de contrôle (tests et boucles)</h2>
 
         <h3>3.1 Opérateurs de comparaison</h3>
@@ -539,49 +435,8 @@
         <br />
 
         <b>Exit code_erreur</b> permet de transmettre une valeur erreur.
-
-        <p>
-        A rajouter :
-
-        “Get-childitem Variable:”
-
-        show-object
-
-        Invoke-WebRequest
-
-        Invoke-RestMethod
-
-        Envoyer du texte vers le presse-papiers :
-        Gci | clip
-
-        Chercher un module sur internet :
-        Find-module
-
-        Installer un module trouvé sur internet
-        install-module
-
-        ## .NET lists which are very fast
-
-        $intList = New-Object System.Collections.Generic.List[int]
-        1..10000 | % { $intList.Add($_) }
-
-        $objList = New-Object System.Collections.Generic.List[object]
-        Get-ChildItem | % { $objList.Add($_) }
-
-        $intList.Count
-        $objList.Count
-
-        $intList.Where({ $_ % 1000 -eq 0})
-
-
-
-        + Rajouter ce qui se trouve sur ce site :
-        https://blogs.technet.microsoft.com/ashleymcglone/2017/07/12/slow-code-top-5-ways-to-make-your-powershell-scripts-run-faster/
-        </p>
     </div>
 
-
-
-<script src="scripts/prism.js"></script>
+<script src="../../../scripts/prism.js"></script>
 </body>
 </html>

@@ -1,14 +1,11 @@
 html {
-  font-size: 12px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-size: 12px;
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  width: 600px;
   margin: 0 auto;
   background-color: rgb(224, 224, 224);
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
 }
 
 h1 {
@@ -62,5 +59,43 @@ tbody td {
 
 tfoot th {
   text-align: right;
+}
+
+
+
+.navigation ul {
+  list-style-type: none; /* On n'affiche pas le "." de la liste */
+  margin: 0;
+  padding: 0;
+  width: 150px; /*largeur de la barre de navigation */
+  background-color: #f1f1f1; /* couleur d'arrière-plan de la barre de navigation */
+  height: 100%; /* hauteur = page entière */
+  position: fixed; /* ne boiuge pas, même si l'utilisateur scroll la page */
+  overflow: auto; /* scrolling actif si la barre de navigation a trop de données */
+}
+
+.navigation li a {
+  display: block; /* permet de cliquer n'importe où sur la cellule, pas uniquement le texte */ 
+  color: #000; /* couleur du texte du lien si la souris n'est pas dessus */
+  padding: 8px 16px;
+  text-decoration: none; /* suppression du soulignement pour les liens */
+}
+
+.navigation li a:hover:not(.active) {
+  background-color: #555; /* couleur du menu lorsque la souris passe dessus */
+  color: white; /* couleur du texte du menu lorsque la souris passe dessus */
+}
+
+.navigation li a.active {
+  background-color: rgb(255, 81, 0); /* couleur d'arrière-plan du menu actuellement sélectionné */
+  color: white; /* couleur du texte du menu actuellement sélectionné */
+}
+
+
+
+.contenu {
+  margin-left:150px;
+  padding:1px 16px;
+  height:1px;
 }
 
