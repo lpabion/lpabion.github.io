@@ -16,7 +16,7 @@ h1 {
 
 table {
   table-layout: fixed;
-  width: 80%;
+  width: 100%;
   border-collapse: collapse;
   border: 1px solid rgb(78, 78, 78);
 }
@@ -94,9 +94,9 @@ tfoot th {
 
 
 .contenu {
-  margin-left:150px;
+  margin-left:200px;
   padding:1px 16px;
   height:1px;
-  width: 800px;
+  width: 700px;
 }
 
