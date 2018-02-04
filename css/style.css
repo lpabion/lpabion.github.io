@@ -10,8 +10,19 @@ body {
 
 h1 {
   margin: 0;
-  padding: 20px 0;    
+  padding: 24px 0;    
   color: #00539F;
+  font-weight: 900;
+}
+
+/* ligne */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(0, 0, 0);
+  margin: 1em 0;
+  padding: 0;
 }
 
 table {
